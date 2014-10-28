@@ -17,15 +17,28 @@ get_username = require('social-url-to-username');
 facebook = get_username.facebook('https://www.facebook.com/foobar'); // returns foobar
 twitter = get_username.twitter('https://www.twitter.com/foobar'); // returns foobar
 google = get_username.google('https://plus.google.com/+foobar'); // returns foobar
+github = get_username.google('https://github.com/foobar/repo'); // returns foobar
 
 facebook = get_username.facebook('https://www.facebook.com/nvld'); // returns null (invalid)
 twitter = get_username.twitter('https://www.twitter.com/inva.lid'); // returns null (invalid)
+github = get_username.google('https://github.com/join'); // returns null (invalid)
 ```
 
 Tests
 ----
 
 `npm run test`
+
+Change log
+----
+
+**0.0.2**
+-Added Github
+
+**0.0.1**
+-Added Facebook
+-Added Twitter
+-Added Googleplus
 
 License
 ----

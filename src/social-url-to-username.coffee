@@ -24,3 +24,27 @@ exports.google = (profile_url) ->
     return matches[1]
   else
     return null
+
+# Username may only contain alphanumeric characters or dashes and cannot begin with a dash, <= 39, >=1
+exports.github = (profile_url) ->
+  matches = profile_url.match /^(?:https?:\/\/)?(?:www\.)?github\.com\/([^\-][a-z0-9\-]*)(?:\/\w*)?$/i
+  blacklist = [
+    'c'
+    'blog'
+    'explore'
+    'features'
+    'notifications'
+    'settings'
+    'terms'
+    'site'
+    'security'
+    'contact'
+    'about'
+    'login'
+    'join'
+  ]
+
+  if matches? and matches.length is 2 and matches[1]? and matches[1].length >= 1 and matches[1].length <= 39 and matches[1] not in blacklist
+    return matches[1]
+  else
+    return null

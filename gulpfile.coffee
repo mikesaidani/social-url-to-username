@@ -3,7 +3,7 @@ coffee = require 'gulp-coffee'
 
 # error handler
 handleError = (err) ->
-  gutil.log err
+  console.log err
   this.emit 'end'
 
 gulp.task 'coffee', () ->

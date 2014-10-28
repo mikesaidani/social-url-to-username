@@ -1,6 +1,6 @@
 {
   "name": "social-url-to-username",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility library to extract a username from a user's socialmedia profile link.",
   "main": "build/social-url-to-username.js",
   "scripts": {
