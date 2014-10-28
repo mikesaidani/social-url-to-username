@@ -20,14 +20,10 @@ exports.twitter = function(profile_url) {
 
 exports.google = function(profile_url) {
   var matches;
-  matches = profile_url.match(/^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?(\+[^/]+)(?:\/\w+)*$/i);
+  matches = profile_url.match(/^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?\+([^/]+)(?:\/\w+)*$/i);
   if ((matches != null) && matches.length === 2 && (matches[1] != null) && matches[1].length >= 1 && matches[1].length <= 15) {
     return matches[1];
   } else {
     return null;
   }
-  if (value) {
-    return /^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?(\+[^/]+)(?:\/\w+)*$/i.test('plus.gogle.com/' + value);
-  }
-  return true;
 };

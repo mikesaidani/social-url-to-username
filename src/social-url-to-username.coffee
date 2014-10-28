@@ -18,12 +18,9 @@ exports.twitter = (profile_url) ->
 
 # IDK
 exports.google = (profile_url) ->
-  matches = profile_url.match /^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?(\+[^/]+)(?:\/\w+)*$/i
+  matches = profile_url.match /^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?\+([^/]+)(?:\/\w+)*$/i
 
   if matches? and matches.length is 2 and matches[1]? and matches[1].length >= 1 and matches[1].length <= 15
     return matches[1]
   else
     return null
-
-  return /^(?:https?:\/\/)?plus\.google\.com\/(?:.?\/)?(?:.?\/)?(\+[^/]+)(?:\/\w+)*$/i.test('plus.gogle.com/'+value) if value
-  return true
