@@ -40,3 +40,13 @@ exports.github = function(profile_url) {
     return null;
   }
 };
+
+exports.linkedin = function(profile_url) {
+  var matches;
+  matches = profile_url.match(/^(?:https?:\/\/)?(?:(?:www|\w\w)\.)?linkedin.com\/(?:(?:pub\/|in\/)([\w\-]+))/i);
+  if ((matches != null) && matches.length === 2 && (matches[1] != null) && matches[1].length >= 5 && matches[1].length <= 30) {
+    return matches[1];
+  } else {
+    return null;
+  }
+};

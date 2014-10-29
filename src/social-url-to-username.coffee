@@ -48,3 +48,11 @@ exports.github = (profile_url) ->
     return matches[1]
   else
     return null
+
+# between 5 and 30 letters, numbers, -
+exports.linkedin = (profile_url) ->
+  matches = profile_url.match /^(?:https?:\/\/)?(?:(?:www|\w\w)\.)?linkedin.com\/(?:(?:pub\/|in\/)([\w\-]+))/i
+  if matches? and matches.length is 2 and matches[1]? and matches[1].length >= 5 and matches[1].length <= 30
+    return matches[1]
+  else
+    return null

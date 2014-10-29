@@ -32,6 +32,9 @@ Tests
 Change log
 ----
 
+**0.0.3**
+-Added Linkedin
+
 **0.0.2**
 -Added Github
 
