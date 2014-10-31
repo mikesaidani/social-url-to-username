@@ -48,7 +48,9 @@ Change log
 
 **0.0.1**
 -Added Facebook
+
 -Added Twitter
+
 -Added Googleplus
 
 License
